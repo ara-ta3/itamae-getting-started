@@ -20,11 +20,15 @@ template "/etc/yum.repos.d/remi.repo" do
   source "../templates/remi.repo"
 end
 
+template "/etc/pki/rpm-gpg/RPM-GPG-KEY-remi" do
+  source "../templates/RPM-GPG-KEY-remi"
+end
+
 %w{
-  php
+  'php'
 }.each do |pkg|
   package pkg do
-    options "--enablerepo=remi --enablerepo=remi-php55"
+    options "--enablerepo=remi-php55"
     action :install
   end
 end
