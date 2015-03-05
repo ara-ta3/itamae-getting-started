@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
+    diff-lcs (1.2.5)
     hashie (3.4.0)
     itamae (1.1.16)
       ansi
@@ -10,9 +11,32 @@ GEM
       thor
     itamae-plugin-recipe-rtn_git (0.1.1)
       itamae (~> 1.0)
+    multi_json (1.11.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
+    rake (10.4.2)
+    rspec (3.2.0)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+    rspec-core (3.2.1)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.2)
+    serverspec (2.8.2)
+      multi_json
+      rspec (~> 3.0)
+      rspec-its
+      specinfra (~> 2.12)
     specinfra (2.12.7)
       net-scp
       net-ssh
@@ -24,3 +48,5 @@ PLATFORMS
 DEPENDENCIES
   itamae
   itamae-plugin-recipe-rtn_git
+  rake
+  serverspec

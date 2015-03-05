@@ -17,3 +17,6 @@ destroy:
 
 provision:
 	vagrant provision
+
+test:
+	rake
